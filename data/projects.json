@@ -1,0 +1,26 @@
+{
+    "header": "projects",
+    "body": [
+        {
+            "name": "Daniel Choi",
+            "location": "Bethesda, MD",
+            "company": "IBM"
+        },
+        [
+            {
+                "what": "Data Structures and Algo using Rust",
+                "details": "...",
+                "progress": "On-going"
+            },
+            {
+                "what": "Boids Implementation in JS",
+                "details": "On-going" 
+            },
+            {
+                "what": "Machine Learning in Golang",
+                "details": "On-going" 
+            }
+        ]
+    ],
+    "footer": []
+}

@@ -1,0 +1,15 @@
+{
+    "header": "about",
+    "body": [
+        {
+            "name": "Daniel Choi",
+            "location": "Bethesda, MD",
+            "company": "IBM"
+        },
+        {
+            "text1": "Daniel Choi is a software developer at IBM.",
+            "text2": "..."
+        }
+    ],
+    "footer": []
+}

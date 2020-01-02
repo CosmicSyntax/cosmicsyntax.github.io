@@ -1,0 +1,25 @@
+{
+    "header": "interests",
+    "body": [
+        {
+            "name": "Daniel Choi",
+            "location": "Bethesda, MD",
+            "company": "IBM"
+        },
+        [
+            {
+                "what": "Systems Programming",
+                "details": "..." 
+            },
+            {
+                "what": "Data Visualization",
+                "details": "..." 
+            },
+            {
+                "what": "Machine Learning and Statistics",
+                "details": "..." 
+            }
+        ]
+    ],
+    "footer": []
+}
