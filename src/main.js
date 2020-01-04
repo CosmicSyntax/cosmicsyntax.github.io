@@ -1,3 +1,5 @@
+import M from "materialize-css/dist/js/materialize";
+
 window.showem = function(iden) {
    let id = iden.getAttribute("data-id");
 
@@ -58,4 +60,14 @@ promise.then(d => {
    console.log(data);
 }).catch(d => {
    console.error(d);
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    let elems = [
+        document.querySelectorAll('.collapsible'),
+        document.querySelectorAll('.tooltipped'),
+        
+    ];
+    let collInst = M.Collapsible.init(elems[0]);
+    let toolInst = M.Tooltip.init(elems[1], {"position": "right"});
 });

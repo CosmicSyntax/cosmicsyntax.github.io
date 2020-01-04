@@ -18,7 +18,9 @@
     "url": "https://github.com/CosmicSyntax/pweb/issues"
   },
   "homepage": "https://github.com/CosmicSyntax/pweb#readme",
-  "dependencies": {},
+  "dependencies": {
+    "materialize-css": "^1.0.0"
+  },
   "devDependencies": {
     "@babel/cli": "^7.7.7",
     "@babel/core": "^7.7.7",
