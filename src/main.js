@@ -62,12 +62,21 @@ promise.then(d => {
    console.error(d);
 });
 
+let mCollection = new Object;
+
 document.addEventListener('DOMContentLoaded', function() {
     let elems = [
         document.querySelectorAll('.collapsible'),
         document.querySelectorAll('.tooltipped'),
-        
+        document.querySelectorAll('.sidenav'),
     ];
-    let collInst = M.Collapsible.init(elems[0]);
-    let toolInst = M.Tooltip.init(elems[1], {"position": "right"});
+    mCollection.collInst = M.Collapsible.init(elems[0]);
+    mCollection.toolInst = M.Tooltip.init(elems[1], {"position": "right"});
+    mCollection.sidenav  = M.Sidenav.init(elems[2]);
 });
+
+document.querySelector("#menu").addEventListener("click", function() {
+    console.log("Menu has been opened...");
+    mCollection.sidenav[0].open();
+});
+
