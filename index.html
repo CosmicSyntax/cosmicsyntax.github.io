@@ -16,8 +16,7 @@
     <!-- Start Background Video -->
     <div id="background">
         <div id="inner_background">
-            <iframe src="https://www.youtube.com/embed/myzKf7Ume28?playlist=myzKf7Ume28&controls=0&showinfo=0&rel=0&mute=1&autoplay=1&loop=1" frameborder="0" 
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe frameborder="0" allowfullscreen></iframe>
         </div>
     </div>
     <!-- End Video -->
@@ -27,7 +26,12 @@
         <!-- Start of Nav Bar -->
             <nav class="transparent z-depth-0">
                 <div class="nav-wrapper">
-                    <span style="font-size:2em;" class="brand-logo"><i id="menu" style="cursor: pointer;" class="material-icons">menu</i>Cosmic Syntax</span>
+                    <a href="#!" class="brand-logo">Cosmic Syntax</a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a id="menu" class="btn-small waves-effect wave-light pulse blue darken-2" href="#"><i class="material-icons">menu</i></a></li>
+                        <li><a id="stop" class="btn-small waves-effect wave-light blue darken-2" href="#"><i class="material-icons">stop</i></a></li>
+                        <li><a id="reload" class="btn-small waves-effect wave-light blue darken-2" href="#"><i class="material-icons">replay</i></a></li>
+                    </ul>
                     <!--<ul id="nav-mobile" class="right hide-on-med-and-down">-->
                         <!--<li><a onclick="showem(this)" data-id="Projects">Projects</a></li>-->
                         <!--<li><a onclick="showem(this)" data-id="Interests">Interests</a></li>-->
@@ -49,40 +53,36 @@
                             <a href="#email"><span class="white-text email">choi.mina@gmail.com</span></a>
                         </div>
                     </li>
-                    <li><a href="#!" onclick="showem(this)" data-id="Projects">Projects</a></li>
-                    <li><a href="#!" onclick="showem(this)" data-id="Interests">Interests</a></li>
-                    <li><a href="#!" onclick="showem(this)" data-id="About">About</a></li>
-                    <li><a href="#!" onclick="showem(this)" data-id="Reddit">Browse Reddit</a></li>
-                    <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-                    <li><a href="#!">Second Link</a></li>
+                    <li><a class="subheader">Some Nifty Links</a></li>
+                    <li><a class="waves-effect" href="#!" onclick="showem(this)" data-id="Projects">Projects</a></li>
+                    <li><a class="waves-effect" href="#!" onclick="showem(this)" data-id="Interests">Interests</a></li>
+                    <li><a class="waves-effect" href="#!" onclick="showem(this)" data-id="About">About</a></li>
+                    <li><a class="waves-effect" href="#!" onclick="showem(this)" data-id="Reddit">Browse Reddit With Me</a></li>
                     <li><div class="divider"></div></li>
-                    <li><a class="subheader">Subheader</a></li>
-                    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
                 </ul>
             </div>
         <!-- End of Nav Bar -->
+        <!-- Main Body -->
             <div id="summary">
                 <h5>Welcome!</h5>
             </div>
-            <div>
-                <ul class="collapsible">
-                    <li class="active">
-                        <div class="collapsible-header tooltipped" data-tooltip="I am a tooltip">
-                            <i class="material-icons">filter_drama</i>First</div>
-                        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
-                        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
-                        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                    </li>
-                </ul>
-            </div>
-        <!-- Main Body -->
-        
+            <!--<div>-->
+                <!--<ul class="collapsible">-->
+                    <!--<li class="active">-->
+                        <!--<div class="collapsible-header tooltipped" data-tooltip="I am a tooltip">-->
+                            <!--<i class="material-icons">filter_drama</i>First</div>-->
+                        <!--<div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<div class="collapsible-header"><i class="material-icons">place</i>Second</div>-->
+                        <!--<div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>-->
+                        <!--<div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</div>-->
         <!-- End of Main Body -->
 
     </div>
