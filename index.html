@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <!--<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap" rel="stylesheet">-->
+    <!--<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">-->
+    <link rel="stylesheet" href="https://fontlibrary.org/face/iosevka-extended"> 
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -28,9 +29,9 @@
                 <div class="nav-wrapper">
                     <a href="#!" class="brand-logo">Cosmic Syntax</a>
                     <ul class="right hide-on-med-and-down">
-                        <li><a id="menu" class="btn-small waves-effect wave-light pulse blue darken-2" href="#"><i class="material-icons">menu</i></a></li>
-                        <li><a id="stop" class="btn-small waves-effect wave-light blue darken-2" href="#"><i class="material-icons">stop</i></a></li>
-                        <li><a id="reload" class="btn-small waves-effect wave-light blue darken-2" href="#"><i class="material-icons">replay</i></a></li>
+                        <li><a id="menu" class="btn-small waves-effect wave-light pulse yellow accent-2" href="#"><i class="material-icons" style="color: black;">menu</i></a></li>
+                        <li><a id="stop" class="btn-small waves-effect wave-light yellow accent-2" href="#"><i class="material-icons" style="color: black;">stop</i></a></li>
+                        <li><a id="reload" class="btn-small waves-effect wave-light yellow accent-2" href="#"><i class="material-icons" style="color: black;">replay</i></a></li>
                     </ul>
                     <!--<ul id="nav-mobile" class="right hide-on-med-and-down">-->
                         <!--<li><a onclick="showem(this)" data-id="Projects">Projects</a></li>-->
@@ -42,11 +43,10 @@
 
             </nav>
             <div>
-                <ul id="slide-out" class="sidenav">
+                <ul id="slide-out" class="sidenav grey lighten-5">
                     <li>
                         <div class="user-view">
                             <div class="background">
-                                <img src="https://materializecss.com/images/office.jpg">
                             </div>
                             <a href="#user"><img class="circle" src="https://lh3.googleusercontent.com/ogw/ADGmqu_e_-4fGuyGpWdnbDYSCkJgXryCcBhFIoPMYJJt=s83-c-mo"></a>
                             <a href="#name"><span class="white-text name">Daniel Choi</span></a>
@@ -57,14 +57,15 @@
                     <li><a class="waves-effect" href="#!" onclick="showem(this)" data-id="Projects">Projects</a></li>
                     <li><a class="waves-effect" href="#!" onclick="showem(this)" data-id="Interests">Interests</a></li>
                     <li><a class="waves-effect" href="#!" onclick="showem(this)" data-id="About">About</a></li>
-                    <li><a class="waves-effect" href="#!" onclick="showem(this)" data-id="Reddit">Browse Reddit With Me</a></li>
+                    <li><a class="waves-effect" href="#!" onclick="showem(this)" data-id="Reddit">My Reddit Activity</a></li>
                     <li><div class="divider"></div></li>
                 </ul>
             </div>
         <!-- End of Nav Bar -->
         <!-- Main Body -->
-            <div id="summary">
-                <h5>Welcome!</h5>
+            <div id="renderspace">
+                <h5 style="margin-top: 25px; margin-bottom: 25px;">Hi there! Welcome to my little nook.</h5>
+                <p>As you can tell, this website is not finished.</p>
             </div>
             <!--<div>-->
                 <!--<ul class="collapsible">-->

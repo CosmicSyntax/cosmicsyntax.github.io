@@ -51,7 +51,7 @@ function get(url) // Creating a function that can execute async method and build
 let data = new Array;
 let dataok = false;
 
-let promise = get("https://www.reddit.com/r/popular/hot.json?limit=5");
+let promise = get("https://www.reddit.com/user/alegionnaire/comments.json?limit=3");
 promise.then(d => {
    data.push(d);
    return get("./data/about.json");
@@ -126,9 +126,9 @@ document.querySelector("#reload").addEventListener("click", function() {
 function vidGen() {
     let vid = [
         ["myzKf7Ume28",  0],
-        ["cDinEsC9a2k",  5],
-        ["ftlvreFtA2A", 20],
-        ["sb6WlQiaJeM", 28],
+        //["cDinEsC9a2k",  5],
+        //["ftlvreFtA2A", 20],
+        //["sb6WlQiaJeM", 28],
     ];
     let rand = Math.floor(Math.random() * vid.length);
     let frame = document.querySelector("iframe");
