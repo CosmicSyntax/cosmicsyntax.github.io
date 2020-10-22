@@ -3,14 +3,21 @@ import $ from "jquery";
 
 // Get the time when the site was first opened...
 let d = new Date;
-let theTime = d.getHours();
+let theHour = d.getHours();
+let theMin = d.getMinutes();
 let greeting;
 
 // Greetings
-if (theTime >= 0 && theTime < 4) {
-    greeting = `Wow it's ${theTime} in the morning... you're up late.`;
-} else if (theTime >= 4 && theTime < 12) {
+if (theHour >= 0 && theHour < 4) {
+    if (theHour == 0) {
+        greeting = `Wow it's 12:${theMin} in the morning... you're up late.`;
+    } else {
+        greeting = `Wow it's ${theHour}:${theMin} in the morning... you're up late.`;
+    }
+} else if (theHour >= 4 && theHour < 12) {
     greeting = "Good Morning!";
+} else if (theHour >= 12 && theHour < 15) {
+    greeting = "Good Afternoon!";
 } else {
     greeting = "Good Evening!";
 }
@@ -26,22 +33,22 @@ function get(url) // Creating a function that can execute async method and build
         function(resolve, reject)
         {
             // callback function is the async...
-            var xhttp = new XMLHttpRequest();
+            let xhttp = new XMLHttpRequest();
             xhttp.open("GET", url, true); // set up... has have fetch data yet
             xhttp.onload = function() // when data is available... do
             {
                 if (xhttp.status == 200)
                 {
-                    resolve(JSON.parse(xhttp.response)) //run the resolve method when success
+                    resolve(JSON.parse(xhttp.response)); //run the resolve method when success`
                 }
                 else
                 {
-                    reject(xhttp.statusText) //run the reject method if it fails
+                    reject(xhttp.statusText); //run the reject method if it fails
                 }
             };
 
             xhttp.onerror = function(){
-                reject(xhttp.statusText) //repeat... I guess this is some terrible legacy code
+                reject(xhttp.statusText); //repeat... I guess this is some terrible legacy code
             };
             xhttp.send(); //make the AJAX request now...
         }
@@ -51,20 +58,33 @@ function get(url) // Creating a function that can execute async method and build
 let data = new Array;
 let dataok = false;
 
-let promise = get("https://www.reddit.com/user/alegionnaire/comments.json?limit=3");
-promise.then(d => {
-   data.push(d);
-   return get("./data/about.json");
-}).then(d => {
-   data.push(d);
-   return get("./data/interests.json");
-}).then(d => {
-   data.push(d);
-   dataok = true;
-   console.log(data);
-}).catch(d => {
-   console.error(d);
-});
+/*let promise = get("https://www.reddit.com/user/alegionnaire/comments.json?limit=3");*/
+//promise.then(d => {
+   //data.push(d);
+   //return get("./data/about.json");
+//}).then(d => {
+   //data.push(d);
+   //return get("./data/interests.json");
+//}).then(d => {
+   //data.push(d);
+   //dataok = true;
+   //console.log(data);
+//}).catch(d => {
+   //console.error(d);
+/*});*/
+
+async function getMyData() {
+    let d1 = get("https://www.reddit.com/user/alegionnaire/comments.json?limit=3");
+    let d2 = get("./data/about.json");
+    let d3 = get("./data/interests.json");
+
+    await d1.then(d => data.push(d)).catch(() => console.log("Reddit Fail..."));
+    await d2.then(d => data.push(d)).catch(() => console.log("Fail..."));
+    await d3.then(d => data.push(d)).catch(() => console.log("Fail..."));
+
+    console.log(data);
+}
+getMyData();
 
 window.showem = function(iden) {
     closeSidebar(350);
