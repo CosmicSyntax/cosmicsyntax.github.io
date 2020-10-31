@@ -1,10 +1,13 @@
 const path = require("path");
 
 module.exports = {
+    externals: {
+        jquery: 'jQuery'
+    },
     entry: "./src/main.js",
     output: {
-        path: path.resolve(__dirname, "script"),
-        filename: "script.js",
+        path: path.resolve(__dirname, "files"),
+        filename: "main.js",
     },
     devServer: {
         contentBase: path.resolve(__dirname, "./"),
