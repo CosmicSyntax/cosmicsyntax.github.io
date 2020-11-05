@@ -11,7 +11,7 @@ module.exports = {
     },
     devServer: {
         contentBase: path.resolve(__dirname, "./"),
-        publicPath: "/script",
+        publicPath: "/files",
     },
     module: {
         rules: [{
