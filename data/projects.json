@@ -14,11 +14,13 @@
             },
             {
                 "what": "Boids Implementation in JS",
-                "details": "On-going" 
+                "details": "...",
+                "progress": "On-going"
             },
             {
                 "what": "Machine Learning in Golang",
-                "details": "On-going" 
+                "details": "...",
+                "progress": "On-going" 
             }
         ]
     ],
