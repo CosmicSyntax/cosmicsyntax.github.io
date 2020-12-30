@@ -1,5 +1,6 @@
 import {get} from "./request";
 import "./material";
+import * as reddit from "./reddit";
 
 // Fetching some data through asynchronous pipeline
 async function getMyData() {
@@ -25,6 +26,7 @@ async function getMyData() {
     }
 }
 
-getMyData().then(d => console.table(d)).catch(Err => console.error(Err));
-
-console.log("HELLO WORLD");
+getMyData().then(d => {
+    let reddit_d = new reddit.Reddit(d[3]);
+    console.log(reddit_d.getdata());
+}).catch(Err => console.error(Err));
