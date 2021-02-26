@@ -6,13 +6,15 @@ import * as reddit from "./reddit";
 async function getMyData() {
 
     let data = new Array;
+    // Fetch the following data asynchronously
     let d1 = get("./data/projects.json");
     let d2 = get("./data/about.json");
     let d3 = get("./data/interests.json");
     // Proxy server for CORS issue
-    let d4 = get("https://thingproxy.freeboard.io/fetch/https://www.reddit.com/user/alegionnaire/comments.json?limit=3");
+    // let d4 = get("https://www.reddit.com/user/alegionnaire/comments.json?limit=3");
+    let d4 = get("./data/reddit.json");
 
-    // If any of the promoises are rejected, no data is pushed and moves to the next await
+    // If any of the promises are rejected, no data is pushed and moves to the next await
     await d1.then(d => data.push(d)).catch(() => console.log("Projects failed..."));
     await d2.then(d => data.push(d)).catch(() => console.log("About failed.."));
     await d3.then(d => data.push(d)).catch(() => console.log("Interests failed..."));
