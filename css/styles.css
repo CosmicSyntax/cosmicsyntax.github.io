@@ -3,6 +3,15 @@ body {
     color: white;
 }
 
+@font-face {
+	font-family: 'IosevkaExtended';
+	font-display: swap;
+	font-weight: 500;
+	font-stretch: expanded;
+	font-style: normal;
+    src: url("./iosevka-extendedmedium.ttf") format("truetype");
+}
+
 .collapsible-header {
     color: black;
     background-color: rgba(255, 255, 255, 0.5) !important;
