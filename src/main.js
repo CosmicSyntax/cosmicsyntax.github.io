@@ -15,10 +15,14 @@ async function getMyData() {
     let d4 = get("./data/reddit.json");
 
     // If any of the promises are rejected, no data is pushed and moves to the next await
-    await d1.then(d => data.push(d)).catch(() => console.log("Projects failed..."));
-    await d2.then(d => data.push(d)).catch(() => console.log("About failed.."));
-    await d3.then(d => data.push(d)).catch(() => console.log("Interests failed..."));
-    await d4.then(d => data.push(d)).catch(() => console.log("Reddit failed..."));
+    await d1.then(d => data.push(d)).catch(() => console.error("Projects failed..."));
+    console.log("Loaded projects...");
+    await d2.then(d => data.push(d)).catch(() => console.error("About failed.."));
+    console.log("Loaded about...");
+    await d3.then(d => data.push(d)).catch(() => console.error("Interests failed..."));
+    console.log("Loaded interests...");
+    await d4.then(d => data.push(d)).catch(() => console.error("Reddit failed..."));
+    console.log("Loaded reddit...");
 
     // All attempts to get the data is done...
     if (data.length == 0) {
