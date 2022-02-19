@@ -19,16 +19,16 @@
   },
   "homepage": "https://github.com/CosmicSyntax/pweb#readme",
   "dependencies": {
-    "jquery": "^3.5.1",
-    "materialize-css": "^1.0.0"
+    "bootstrap": "^5.0.0",
+    "jquery": "^3.6.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.10",
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
     "babel-loader": "^8.2.2",
-    "webpack": "^4.44.2",
-    "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.1"
+    "webpack": "^5.68.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4"
   }
 }

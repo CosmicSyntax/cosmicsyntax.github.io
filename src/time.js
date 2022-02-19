@@ -6,6 +6,10 @@ let greeting;
 
 // Greetings
 
+if (theMin < 10) {
+	theMin = '0' + theMin;
+}
+
 if (theHour >= 0 && theHour < 4) {
     if (theHour == 0) {
         greeting = `Wow it's 12:${theMin} in the morning... you're up late.`;

@@ -1,7 +1,7 @@
 import $ from "jquery";
 
 // Video controls
-document.querySelector("#stop").addEventListener("click", function() {
+/* document.querySelector("#stop").addEventListener("click", function() {
     console.log("Stopping video play...");
 
     $.when($("#stop").fadeOut()).done(() => $("#reload").fadeIn());
@@ -20,7 +20,7 @@ document.querySelector("#reload").addEventListener("click", function() {
     $.when(vidGen()).done(() => {
         $("iframe").fadeIn();
     });
-});
+}); */
 
 async function vidGen() {
     let vid = [

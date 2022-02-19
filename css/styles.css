@@ -1,6 +1,6 @@
 body {
-    font-family: 'IosevkaExtended', sans-serif;
-    color: white;
+    font-family: 'IosevkaExtended', sans-serif !important;
+    color: white !important;
 }
 
 @font-face {
