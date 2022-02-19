@@ -12,8 +12,11 @@ module.exports = {
 	},
 	devServer: {
 		static: {
-			directory: path.resolve(__dirname, "./"), staticOptions: {},
-			publicPath: "/files/",
+			directory: path.resolve(__dirname, "./"),
+			staticOptions: {
+				redirect: true,
+			},
+			publicPath: "/pweb/",
 			serveIndex: true,
 			watch: true,
 		},

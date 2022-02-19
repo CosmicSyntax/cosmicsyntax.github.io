@@ -1,10 +1,15 @@
 import $ from "jquery";
 
 // Video controls
-/* document.querySelector("#stop").addEventListener("click", function() {
+document.querySelector("#stop").addEventListener("click", function() {
     console.log("Stopping video play...");
-
-    $.when($("#stop").fadeOut()).done(() => $("#reload").fadeIn());
+	$.when(
+		$("#stop").addClass("d-none"),
+		$("#stop").removeClass("d-flex"),
+		).done(() => {
+			$("#play").addClass("d-flex");
+			$("#play").removeClass("d-none");
+	});
 
     let frame = document.querySelector("iframe");
     $.when($("iframe").fadeOut()).done(() => {
@@ -12,15 +17,22 @@ import $ from "jquery";
     });
 });
 
-document.querySelector("#reload").addEventListener("click", function() {
+document.querySelector("#play").addEventListener("click", function() {
     console.log("Restarting video play...");
 
-    $.when($("#reload").fadeOut()).done(() => $("#stop").fadeIn());
+    // $.when($("#play").fadeOut()).done(() => $("#stop").fadeIn());
+	$.when(
+		$("#play").addClass("d-none"),
+		$("#play").removeClass("d-flex"),
+	).done(() => {
+		$("#stop").addClass("d-flex");
+		$("#stop").removeClass("d-none");
+	});
 
     $.when(vidGen()).done(() => {
         $("iframe").fadeIn();
     });
-}); */
+});
 
 async function vidGen() {
     let vid = [
