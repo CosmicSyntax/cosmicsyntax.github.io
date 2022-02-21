@@ -6,15 +6,16 @@ document.querySelector("#stop").addEventListener("click", function() {
 	$.when(
 		$("#stop").addClass("d-none"),
 		$("#stop").removeClass("d-flex"),
+		$("#play").addClass("d-flex"),
+		$("#play").addClass("disabled"),
+		$("#play").removeClass("d-none"),
 		).done(() => {
-			$("#play").addClass("d-flex");
-			$("#play").removeClass("d-none");
+			let frame = document.querySelector("iframe");
+			$.when($("iframe").fadeOut()).done(() => {
+				frame.src = "";
+				$("#play").removeClass("disabled");
+			});
 	});
-
-    let frame = document.querySelector("iframe");
-    $.when($("iframe").fadeOut()).done(() => {
-        frame.src = "";
-    });
 });
 
 document.querySelector("#play").addEventListener("click", function() {
@@ -24,14 +25,15 @@ document.querySelector("#play").addEventListener("click", function() {
 	$.when(
 		$("#play").addClass("d-none"),
 		$("#play").removeClass("d-flex"),
+		$("#stop").addClass("d-flex"),
+		$("#stop").addClass("disabled"),
+		$("#stop").removeClass("d-none"),
 	).done(() => {
-		$("#stop").addClass("d-flex");
-		$("#stop").removeClass("d-none");
+		$.when(vidGen()).done(() => {
+			$("iframe").fadeIn();
+			$("#stop").removeClass("disabled");
+		});
 	});
-
-    $.when(vidGen()).done(() => {
-        $("iframe").fadeIn();
-    });
 });
 
 async function vidGen() {

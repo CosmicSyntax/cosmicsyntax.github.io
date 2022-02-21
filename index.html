@@ -28,10 +28,15 @@
 		
 		<!-- Start of Navbar -->
 		<nav class="navbar navbar-dark">
-			<div class="container-fluid">
-				<span class="navbar-brand mb-0 h1">Cosmic Syntax</span>
-				<button id="stop" type="button" class="d-flex btn btn-outline-light">Stop</button>
-				<button id="play" type="button" class="d-none btn btn-outline-light">Play</button>
+			<div class="container-fluid p-0">
+				<span class="navbar-brand mt-0 h1 fs-1">
+					<img src="https://avatars.githubusercontent.com/u/14236737?v=4" alt="" style="border-radius: 50%" width="100" height="100">
+					Cosmic Syntax
+				</span>
+				<div class="d-none d-lg-block d-xl-block">
+					<button id="stop" type="button" class="d-flex btn btn-outline-light">Stop Video</button>
+					<button id="play" type="button" class="d-none btn btn-outline-light">Play Video</button>
+				</div>
 			</div>
 		</nav>
 		<!-- End of Navbar -->
@@ -52,10 +57,46 @@
 		<!-- End of Toast -->
 
 		<div id="daBod">
-			<p class="mt-5">Hello there! Welcome to my little nook. Working on getting this finished...</p>
+			<p class="mt-5 fs-5">Hello there! Welcome to my little nook. This page is a work in progress...</p>
+			<p class="t-5 fs-5">My name is Dan: I am a dad, a software development engineer, and a lifelong learner.</p>
+			<p class="mt-5 fs-5">My primary focus in software development has been in backend and data science. However, 
+			I like to dabble in frontend from time to time</p>
+			<p class="t-5 fs-5">I like problem solving in general. I already mentioned I love learning new things.</p>
+			<p class="mb-5 mt-5 fs-5">Technologies I am actively using right now:</p>
+			<div class="row justify-content-center">
+				<div class="col-6">
+					<ul class="list-group">
+						<li class="list-group-item list-group-item-dark">
+							<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Rust_programming_language_black_logo.svg/768px-Rust_programming_language_black_logo.svg.png" alt="" width="60" height="60">
+							Rust Programming Language
+						</li>
+						<li class="list-group-item list-group-item-dark">
+							<img src="https://blog.karmacomputing.co.uk/content/images/2019/03/learning-go-basics.png" alt="" width="60" height="60">
+							Go Programming Language
+						</li>
+						<li class="list-group-item list-group-item-dark">
+							<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/745px-Postgresql_elephant.svg.png" alt="" width="60" height="60">
+							Postgres
+						</li>
+						<li class="list-group-item list-group-item-dark">
+							<img src="https://cdn.iconscout.com/icon/free/png-256/redis-4-1175103.png" alt="" width="60" height="60">
+							Redis
+						</li>
+						<li class="list-group-item list-group-item-dark">
+							<img src="https://www.laurel-group.com/wp-content/uploads/AWS-logo.png" alt="" width="60" height="60">
+							AWS
+						</li>
+					</ul>
+				</div>
+			</div>
 		</div>
 
     </div>
+	<div class="container fixed-bottom">
+		<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+			<p class="col-md-4 mb-0 mt-0 text-muted">Last Updated: 2022-02-21</p>
+		</footer>
+	</div>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="./files/main.js"></script>
 </body>
