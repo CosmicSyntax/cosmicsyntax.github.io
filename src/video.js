@@ -41,7 +41,7 @@ async function vidGen() {
         ["HsQlpaYTE0s", 0],
         ["x7SQaDTSrVg", 0],
         ["8plwv25NYRo", 0],
-        ["ubNfkpbxXUs", 0],
+        ["ZAAskg8SwSY", 0],
         // ["sb6WlQiaJeM", 28],
     ];
     let rand = Math.floor(Math.random() * vid.length);
