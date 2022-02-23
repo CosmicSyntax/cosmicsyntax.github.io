@@ -39,9 +39,9 @@ document.querySelector("#play").addEventListener("click", function() {
 async function vidGen() {
     let vid = [
         ["HsQlpaYTE0s", 0],
-        // ["myzKf7Ume28",  0],
-        // ["cDinEsC9a2k",  5],
-        // ["ftlvreFtA2A", 20],
+        ["x7SQaDTSrVg", 0],
+        ["8plwv25NYRo", 0],
+        ["ubNfkpbxXUs", 0],
         // ["sb6WlQiaJeM", 28],
     ];
     let rand = Math.floor(Math.random() * vid.length);
