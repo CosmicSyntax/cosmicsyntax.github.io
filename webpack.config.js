@@ -5,7 +5,7 @@ module.exports = {
 		jquery: '$',
 		bootstrap: 'bootstrap',
 	},
-	entry: "./src/main.js",
+	entry: "./src/main.ts",
 	output: {
 		path: path.resolve(__dirname, "files"),
 		filename: "main.js",
@@ -21,9 +21,13 @@ module.exports = {
 			watch: true,
 		},
 	},
+	resolve: {
+		extensions: ['.tsx', '.ts', '.js'],
+	},
 	module: {
 		rules: [{
 			test: /\.js$/,
+			use: 'ts-loader',
 			exclude: /node_modules/,
 			//use: {
 			//loader: "babel-loader",
