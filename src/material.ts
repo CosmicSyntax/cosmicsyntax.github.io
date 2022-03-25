@@ -1,7 +1,7 @@
-import $ from "jquery";
+import * as $ from "jquery";
 import {greeting} from "./time";
 import {vidGen} from "./video";
-import BS from "bootstrap";
+import * as BS from "bootstrap";
 
 // window.showem = function(iden) {
 //     closeSidebar(350);
@@ -11,10 +11,10 @@ import BS from "bootstrap";
 //
 // let mCollection = new Object;
 //
-function timer(ms) {
+function timer(ms: number) {
     return new Promise(resolve => setTimeout(() => resolve(true), ms));
 }
-async function startToast(x) {
+async function startToast(x: number) {
     await timer(x);
 	let toastLive = document.getElementById('liveToast');
 	let toastbody = document.querySelector('#liveToast .toast-body');
