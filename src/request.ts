@@ -1,5 +1,5 @@
 // Get data and do stuff with it
-function get(url) // Creating a function that can execute async method and build a promise...
+function get(url: string) // Creating a function that can execute async method and build a promise...
 {
     return new Promise( //Promise is a function with a callback function
         function(resolve, reject)

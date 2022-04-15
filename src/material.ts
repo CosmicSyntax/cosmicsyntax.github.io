@@ -1,4 +1,4 @@
-import * as $ from "jquery";
+// import * as $ from "jquery";
 import {greeting} from "./time";
 import {vidGen} from "./video";
 import * as BS from "bootstrap";

@@ -1,4 +1,4 @@
-import $ from "jquery";
+import * as $ from "jquery";
 
 // Video controls
 document.querySelector("#stop").addEventListener("click", function() {
@@ -52,7 +52,7 @@ async function vidGen() {
     await sleep(1000);
 }
 
-function sleep(ms) {
+function sleep(ms: any) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 

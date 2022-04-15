@@ -6,12 +6,15 @@
 */
 
 class Struct {
-    constructor(data, template) {
+	data: string;
+	template: string;
+
+    constructor(data: string, template: string) {
         this.data = data;
         this.template = template;
     }
 
-    get property() {
+    get property(): any {
         return null;
     }
     
