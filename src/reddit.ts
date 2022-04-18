@@ -1,7 +1,17 @@
 // Reddit API parser
 
+class Post {
+	title: string;
+	comment: string;
+	subreddit: string;
+	link: string;
+}
+
 class Reddit {
-    constructor(data) {
+
+	data: any;
+
+    constructor(data: any) {
         // JSON from Reddit
         this.data = data;
     }
@@ -15,8 +25,8 @@ class Reddit {
 
         let parsed = new Array;
 
-        data.forEach( d => {
-            let el = new Object;
+        data.forEach( (d: any) => {
+            let el = new Post;
             el.title = d.data.link_title;
             el.comment = d.data.body;
             el.subreddit = d.data.subreddit;
