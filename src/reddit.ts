@@ -5,6 +5,7 @@ class Post {
 	comment: string;
 	subreddit: string;
 	link: string;
+	hash: string;
 }
 
 class Reddit {
@@ -20,10 +21,10 @@ class Reddit {
         return this.data.modhash;
     }
     
-    getdata() {
-        let data = this.data.data.children;
+    getdata(): Post[] {
+        let data: any[] = this.data.data.children;
 
-        let parsed = new Array;
+        let parsed: Post[] = new Array;
 
         data.forEach( (d: any) => {
             let el = new Post;
@@ -31,6 +32,7 @@ class Reddit {
             el.comment = d.data.body;
             el.subreddit = d.data.subreddit;
             el.link = d.data.link_permalink;
+			el.hash = d.data.modhash;
 
             parsed.push(el);
         });
@@ -42,4 +44,4 @@ class Reddit {
 
 // Export...
 
-export {Reddit};
+export {Reddit, Post};

@@ -1,26 +1,39 @@
 // library for rendering dom elements
+import * as reddit from "./reddit";
 
 /*
-    Flow chart
-    DATA + TEMPLATE + TARGET -> KABOOM -> DOM
+	Flow chart
+	DATA + TEMPLATE + TARGET -> KABOOM -> DOM
 */
 
 class Struct {
-	data: string;
-	template: string;
+	data: reddit.Post[];
 
-    constructor(data: string, template: string) {
-        this.data = data;
-        this.template = template;
-    }
+	constructor(data: reddit.Post[]) {
+		this.data = data;
+	}
 
-    get property(): any {
-        return null;
-    }
-    
+	get property(): string {
+		return this.data[0].hash;
+	}
+
+	construct_il(): string[] {
+		let il: string[] = new Array;
+		this.data.forEach(dat => {
+			il.push(
+				`
+					<li class="list-group-item list-group-item-dark text-truncate" title="${dat.title}">
+						<a href="${dat.link}" target="_blank">${dat.comment}</a>
+					</li>
+
+				`
+			);
+		});
+		return il;
+	}
 
 }
 
 // Export...
 
-export {Struct};
+export { Struct };

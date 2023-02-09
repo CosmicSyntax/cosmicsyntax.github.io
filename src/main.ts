@@ -1,6 +1,7 @@
 import {get} from "./request";
 import "./material";
 import * as reddit from "./reddit";
+import * as render from "./render";
 
 // Fetching some data through asynchronous pipeline
 async function getMyData() {
@@ -11,8 +12,8 @@ async function getMyData() {
     let d2 = get("./data/about.json");
     let d3 = get("./data/interests.json");
     // Proxy server for CORS issue
-    // let d4 = get("https://www.reddit.com/user/alegionnaire/comments.json?limit=3");
-    let d4 = get("./data/reddit.json");
+    let d4 = get("https://api.reddit.com/user/alegionnaire/comments.json?limit=3");
+    // let d4 = get("./data/reddit.json");
 
     // If any of the promises are rejected, no data is pushed and moves to the next await
     await d1.then(d => data.push(d)).catch(() => console.error("Projects failed..."));
@@ -34,5 +35,10 @@ async function getMyData() {
 
 getMyData().then(d => {
     let reddit_d = new reddit.Reddit(d[3]);
-    console.log(reddit_d.getdata());
+    let text = new render.Struct(reddit_d.getdata()).construct_il().join(' ');
+	let div = document.getElementById("reddit_anchor");
+	let ul = document.createElement("ul");
+	ul.className = "list-group";
+	ul.innerHTML = text;
+	div.appendChild(ul);
 }).catch(Err => console.error(Err));
