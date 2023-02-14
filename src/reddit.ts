@@ -6,6 +6,7 @@ class Post {
 	subreddit: string;
 	link: string;
 	hash: string;
+	likes: number;
 }
 
 class Reddit {
@@ -33,6 +34,7 @@ class Reddit {
             el.subreddit = d.data.subreddit;
             el.link = d.data.link_permalink;
 			el.hash = d.data.modhash;
+			el.likes = d.data.score;
 
             parsed.push(el);
         });

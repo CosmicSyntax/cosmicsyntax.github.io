@@ -22,8 +22,12 @@ class Struct {
 		this.data.forEach(dat => {
 			il.push(
 				`
-					<li class="list-group-item list-group-item-dark text-truncate" title="${dat.title}">
-						<a href="${dat.link}" target="_blank">${dat.comment}</a>
+					<li class="list-group-item list-group-item-dark d-flex justify-content-between align-items-start" title="${dat.title}">
+						<div class="ms-2 me-auto text-truncate">
+							<div class="fw-bold text-truncate">${dat.title}</div>
+							<a href="${dat.link}" target="_blank">${dat.comment}</a>
+						</div>
+						<span class="badge bg-success rounded-pill">${dat.likes}</span>
 					</li>
 
 				`
