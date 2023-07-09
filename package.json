@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/CosmicSyntax/pweb#readme",
   "dependencies": {
-    "bootstrap": "^5.2.0",
+    "bootstrap": "^5.3.0",
     "jquery": "^3.6.0"
   },
   "devDependencies": {

@@ -13,37 +13,37 @@ class Reddit {
 
 	data: any;
 
-    constructor(data: any) {
-        // JSON from Reddit
-        this.data = data;
-    }
+	constructor(data: any) {
+		// JSON from Reddit
+		this.data = data;
+	}
 
-    get property() {
-        return this.data.modhash;
-    }
-    
-    getdata(): Post[] {
-        let data: any[] = this.data.data.children;
+	get property() {
+		return this.data.modhash;
+	}
 
-        let parsed: Post[] = new Array;
+	getdata(): Post[] {
+		let data: any[] = this.data.data.children;
 
-        data.forEach( (d: any) => {
-            let el = new Post;
-            el.title = d.data.link_title;
-            el.comment = d.data.body;
-            el.subreddit = d.data.subreddit;
-            el.link = d.data.link_permalink;
+		let parsed: Post[] = new Array;
+
+		data.forEach((d: any) => {
+			let el = new Post;
+			el.title = d.data.link_title;
+			el.comment = d.data.body;
+			el.subreddit = d.data.subreddit;
+			el.link = d.data.link_permalink;
 			el.hash = d.data.modhash;
 			el.likes = d.data.score;
 
-            parsed.push(el);
-        });
+			parsed.push(el);
+		});
 
-        return parsed;
-    }
+		return parsed;
+	}
 
 }
 
 // Export...
 
-export {Reddit, Post};
+export { Reddit, Post };
