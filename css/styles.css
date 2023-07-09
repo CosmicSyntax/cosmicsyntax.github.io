@@ -49,9 +49,9 @@ body {
     background-size: 100%;
 }
 
-/* a { */
-/* 	color: black !important; */
-/* } */
+a {
+	color: white !important;
+}
 
 @media (max-aspect-ratio: 16/9) {
     #inner_background {width: 300%; left: -100%;}
