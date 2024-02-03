@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CosmicSyntax/pweb.git"
+    "url": "git+https://github.com/CosmicSyntax/cosmicsyntax.github.io.git"
   },
   "author": "Daniel Choi",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/CosmicSyntax/pweb/issues"
+    "url": "https://github.com/CosmicSyntax/cosmicsyntax.github.io/issues"
   },
-  "homepage": "https://github.com/CosmicSyntax/pweb#readme",
+  "homepage": "https://github.com/CosmicSyntax/cosmicsyntax.github.io/issues#readme",
   "dependencies": {
     "bootstrap": "^5.3.0",
     "jquery": "^3.6.0"
