@@ -21,7 +21,7 @@ async function startToast(x: number) {
 	let toastbody = document.querySelector('#liveToast .toast-body');
 	let toastheader = document.querySelector('#liveToast .me-auto');
 	let toastright = document.querySelector('#liveToast .right-msg');
-	toastbody.textContent = greeting;
+	toastbody.innerHTML = `<img src="https://static.wikia.nocookie.net/mugen/images/e/e8/ClippyArtwork.png" width="25%" class="rounded me-2" alt = "..."><span>${greeting}</span>`;
 	toastheader.textContent = "Hello there!";
 	toastright.textContent = "just now";
 	let toast = new BS.Toast(toastLive);
